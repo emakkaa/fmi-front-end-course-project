@@ -1,0 +1,434 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Xcars</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
+
+    <!-- Css -->
+    <link rel="stylesheet" type="text/css" href="web/css/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="web/css/slick.css" />
+
+    <link rel="stylesheet" type="text/css" href="web/css/normalize.min.css" />
+    <link rel="stylesheet" type="text/css" href="web/css/main.css" />
+
+    <!-- JQuery -->
+    <script src="web/js/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div class="site">
+        <header class="main-header">
+            <a href="./" title="" class="site-logo">
+                <img src="web/images/logo.svg" alt="X Cars" />
+                <strong class="visuallyhidden">X Cars</strong>
+            </a>
+
+            <button type="button" class="hamburger js-open-nav">
+                <span class="hamburger__btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+
+            <nav class="js-main-nav main-header__nav">
+                <ul>
+                    <li>
+                        <a href="./" title="home" class="icon-home">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./news.html" title="news" class="icon-news">
+                            <span>News</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./contact.html" title="contacts" class="icon-contacts">
+                            <span>Contacts</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <main class="main-content">
+            <section class="contact">
+                <div class="contact__map">
+                    <div id="map" class="contact__map__map"></div>
+                </div>
+                <div class="contact__text">
+                    <header>
+                        <h1>Contact us</h1>
+                    </header>
+                    <ul class="contact__text__list">
+                        <li class="contact__text__list__col-100">
+                            <span class="contact__text__list__title">A</span>
+                            <span>Bulgaria, Sofia, ul.Neofit Rilski 5</span>
+                        </li>
+                        <li class="contact__text__list__col-50">
+                            <span class="contact__text__list__title">T</span>
+                            <a href="tel: 088843724">088843724</a>
+                        </li>
+                        <li class="contact__text__list__col-50">
+                            <span class="contact__text__list__title">E</span>
+                            <a href="mail: xcars@gmail.com">xcars@gmail.com</a>
+                        </li>
+                    </ul>
+                    <form method="" id="">
+                        <fieldset>
+                            <ul class="form-grid">
+                                <li>
+                                    <label for="first-name">First name: </label>
+                                    <input type="text" id="first-name" name="first-name" />
+                                </li>
+                                <li>
+                                    <label for="email">E-mail: </label>
+                                    <input type="text" id="email" name="email" />
+                                </li>
+                                <li>
+                                    <label for="message">Message: </label>
+                                    <textarea id="message" name="message"></textarea>
+                                </li>
+                                <li>
+                                    <button type="submit" class="btn">Send</button>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <div class="main-footer__wrap">
+                <small>@Copyright XCars</small>
+                <ul class="main-footer__nav">
+                    <li>
+                        <a href="./" title="">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./news.html" title="news">
+                            <span>News</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./contact.html" title="contacts">
+                            <span>Contacts</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+        <!-- Slick plugin (Slider) -->
+        <script type="text/javascript" src="web/js/slick.min.js"></script>
+
+        <!-- Fullpage js plugin (Homepage) -->
+        <script type="text/javascript" src="web/js/scrolloverflow.min.js"></script>
+        <script type="text/javascript" src="web/js/jquery.fullPage.js"></script>
+
+        <!-- Masonry plugin (Grid news) -->
+        <script type="text/javascript" src="web/js/masonry.min.js"></script>
+
+        <!-- Respimage js (picture) -->
+        <script type="text/javascript" src="web/js/respimage.js"></script>
+
+        <!-- Main js -->
+        <script src="web/js/main.js"></script>
+    </div>
+</body>
+
+</html>
+
+<script>
+    `use strict`;
+
+    const MIN_NAME_LENGTH = 3;
+    const INVALID_FIRST_NAME_MESSAGE = "Invalid first name.";
+    const INVALID_EMAIL_MESSAGE = "Invalid email.";
+    const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    $('form').on('submit', function (ev) {
+        var errors = validateForm();
+        if (errors.length) {
+            ev.preventDefault();
+        }
+    });
+
+    var validateForm = function () {
+        var errors = [];
+        clearForm();
+        validateFirstName(errors);
+        validateEmail(errors);
+        return errors;
+    };
+
+    var clearForm = function () {
+        $('.error-message').remove();
+        $('#first-name').parent().removeClass('error');
+        $('#email').parent().removeClass('error');
+    };
+
+    var validateFirstName = function (errors) {
+        var firstName = $('#first-name').val();
+        if (!firstName.length || firstName.length < MIN_NAME_LENGTH) {
+            var error = '<span class="error-message">' + INVALID_FIRST_NAME_MESSAGE + '</span>';
+            $('#first-name').parent().append(error);
+            $('#first-name').parent().addClass('error');
+            errors.push(error);
+        }
+    };
+
+    var validateEmail = function (errors) {
+        var email = $('#email').val();
+        var isValid = emailRegex.test(String(email).toLowerCase());
+        if (isValid) {
+            return;
+        }
+        var error = '<span class="error-message">' + INVALID_EMAIL_MESSAGE + '</span>';
+        $('#email').parent().append(error);
+        $('#email').parent().addClass('error');
+        errors.push(error);
+    };
+
+    function initMap() {
+        var style = [
+            {
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#212121"
+                    }
+                ]
+            },
+            {
+                "elementType": "labels.icon",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#757575"
+                    }
+                ]
+            },
+            {
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                    {
+                        "color": "#212121"
+                    }
+                ]
+            },
+            {
+                "featureType": "administrative",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#757575"
+                    }
+                ]
+            },
+            {
+                "featureType": "administrative.country",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#9e9e9e"
+                    }
+                ]
+            },
+            {
+                "featureType": "administrative.land_parcel",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "administrative.locality",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#bdbdbd"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#757575"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi.park",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#181818"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi.park",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#616161"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi.park",
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                    {
+                        "color": "#1b1b1b"
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "color": "#2c2c2c"
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#8a8a8a"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.arterial",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#373737"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#3c3c3c"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway.controlled_access",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#4e4e4e"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.local",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#616161"
+                    }
+                ]
+            },
+            {
+                "featureType": "transit",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#757575"
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#000000"
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#3d3d3d"
+                    }
+                ]
+            }
+        ];
+
+        map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 12,
+            center: new google.maps.LatLng(-33.91722, 151.23064),
+            mapTypeId: 'roadmap',
+            styles: style
+        });
+
+        var icons = {
+            offis: {
+                icon: 'web/images/icon-map.svg'
+            }
+        };
+
+        var features = [
+            {
+                position: new google.maps.LatLng(-33.91721, 151.22630),
+                type: 'offis'
+            }
+        ];
+
+        // Create markers.
+        features.forEach(function (feature) {
+            var marker = new google.maps.Marker({
+                position: feature.position,
+                icon: icons[feature.type].icon,
+                map: map
+            });
+        });
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADuWs8qCgAvuxPJTeeIpplTn4nqccqfCY&callback=initMap">
+</script>
+<!--#include file="_includes/_bottom.html" -->

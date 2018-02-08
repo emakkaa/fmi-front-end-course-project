@@ -1,0 +1,35 @@
+{
+    "id": 1,
+    "header": "Mercedes-Benz GLC-class",
+    "car": {
+        "epa": "21/28 mpg",
+        "аcceleration": "5.9 sec",
+        "hp": "241 hp",
+        "capacity": 5
+    },
+    "topParagraphs": [
+        {
+            "header": "Overview",
+            "content": "The 2017 Mercedes-Benz GLC-class is a solidly competent if unassuming entry in the ever-important compact-luxury-SUV class. While competitors such as the Porsche Macan, the Jaguar F-Pace, and the BMW X3 offer a more vivid driving experience, the GLC-class skates by anonymously, neither exciting nor offending. Don’t get us wrong—there is magic in the bones of the C-class–based GLC-class, but to truly enjoy time behind the wheel,you’ll need to plop down $55,825 for the 362-hp twin-turbo V-6–powered Mercedes-AMG GLC43 4MATIC.Nevertheless, those content with the $40,075 GLC300’s more detached driving experience and 241-hp 2.0-liter turbocharged inline-four will find a top-notch interior that is paired with competent handling and a cushy ride. Available with rear- or all-wheel drive ($2000), the GLC300’s powertrain may lack the underhood fervor found in some other compact luxury crossovers, but the four-pot edition still is plenty quick, with a GLC300 4MATIC sprinting from zero to 60 mph in a very respectable 5.9 seconds in our testing. Yet in day-to-day driving, the GLC300 never feels particularly eager. Partial blame goes to the nine-speed automatic transmission, which is programmed to have the GLC300 start off in second gear when the car is in its default Comfort mode. Sport and Sport+ drive settings override this, as do steering-wheel-mounted paddle shifters, but those modes must be selected every time the GLC300 is restarted.For the purpose of this review, we drove a $42,075 GLC300 4MATIC fitted with $19,820 in options, bringing its sticker price to $61,895. A GLC300 equipped with just our test car’s $7200 Premium 3 package (which also requires the $850 Burmester stereo system and $580 heated front seats) would lower the price to a more reasonable $50,705 while keeping important technology and active-safety features. Premium 3 includes a proximity key, navigation, a touchpad for the COMAND system, satellite radio, illuminated doorsills, a perfume atomizer, swiveling LED headlights with automatic high-beams, adaptive cruise control with steering assist, an automatic braking system capable of detecting pedestrians, blind-spot monitoring, lane-keeping assist, and a host of other items."
+			
+        },
+        {
+            "header": "What’s New:",
+            "content": "All-new for 2016, the GLC-class enters 2017 almost completely unchanged. Those willing to sacrifice cargo space for additional style, however, may want to look at the new-for-2017 Mercedes-Benz GLC-class coupe."
+        }
+    ],
+    "images": [
+        {
+            "src": "web/images/background-1.jpg"
+        },
+        {
+            "src": "web/images/background-2.jpg"
+        }
+    ],
+    "bottomParagraphs": [
+        {
+            "header": "What We Like:",
+            "content": "The GLC-class has one of the most lavish cabins in the compact-luxury-crossover segment. Sharing much of its design with the C-class, the GLC’s interior employs top-notch materials and has pleasing and expensive-looking details throughout. Additionally, it has a comfortable and accommodating rear bench seat that offers generous headroom and legroom."
+        }
+    ]
+}
